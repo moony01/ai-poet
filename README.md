@@ -13,6 +13,8 @@ https://ai-poet-moony.streamlit.app/
 
 3. llama-2-7b-chat.ggmlv3.q2_K.bin 파일인 LLM은 가장 적은 파라미터의 경량화 LLM입니다. **테스트 용도로 추천**
 
+4. LLM을 다운 받았으면 로컬 저장소에 업로드 합니다. (llama.py와 같은 계층에)
+
 5. LLAMA의 경우 llama.py 파일을 실행시켜줍니다. (open ai는 .env에 키를 발급 받아 입력해야합니다.)
 
 ## 로컬 스트림릿 서버 실행
