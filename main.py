@@ -1,10 +1,12 @@
-# from dotenv import load_dotenv
 import os
 
-# load_dotenv()
+# 로컬로 테스트 할 땐 아래 코드 주석을 해제해야함
+from dotenv import load_dotenv
+load_dotenv()
 
 # 환경 변수가 올바르게 로드되었는지 확인
 api_key = os.getenv('OPENAI_API_KEY')
+
 # if api_key is None:
 #     print("API key is not loaded. Check your .env file and variable name.")
 # else:
@@ -16,11 +18,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
 llm = ChatOpenAI(openai_api_key=api_key)
-output_parser = StrOutputParser()
 
-# LLM에 바로 invoke 하면 complete 모드로 결과를 반환함
-# result = llm.invoke("how can langsmith help with testing?")
-# print(result);
+output_parser = StrOutputParser()
 
 # Chat mode를 사용하기 위해서는 ChatPromptTemplate 라이브러리를 사용해야함.
 prompt = ChatPromptTemplate.from_messages([
@@ -38,5 +37,3 @@ if st.button('시 작성 요청하기'):
     with st.spinner('시 작성 중...'):
         result = chain.invoke({"input": content + "에 대한 시를 써줘"})
         st.write(result)
-
-# st.write('시의 주제는', title)
