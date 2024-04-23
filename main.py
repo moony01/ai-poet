@@ -1,8 +1,8 @@
 import os
 
-# 로컬로 테스트 할 땐 아래 코드 주석을 해제해야함
-from dotenv import load_dotenv
-load_dotenv()
+# !!!!!!!!!! 로컬로 테스트 할 땐 아래 코드 주석을 해제해야함 !!!!!!!!!!
+# from dotenv import load_dotenv
+# load_dotenv()
 
 # 환경 변수가 올바르게 로드되었는지 확인
 api_key = os.getenv('OPENAI_API_KEY')
