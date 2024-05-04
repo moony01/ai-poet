@@ -4,18 +4,13 @@ import os
 # from dotenv import load_dotenv
 # load_dotenv()
 
-# 환경 변수가 올바르게 로드되었는지 확인
-api_key = os.getenv('OPENAI_API_KEY')
-
-# if api_key is None:
-#     print("API key is not loaded. Check your .env file and variable name.")
-# else:
-#     print("API key loaded successfully.")
-
 import streamlit as st
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
+
+# 환경 변수가 올바르게 로드되었는지 확인
+api_key = os.getenv('OPENAI_API_KEY')
 
 llm = ChatOpenAI(openai_api_key=api_key)
 
