@@ -2,7 +2,6 @@
 AI 시 생성: [ai-poet-moony.streamlit.app](https://ai-poet-moony.streamlit.app/)
 
 ## 프로젝트 설명
-
 Langchain framework를 활용한 AI 시 생성 앱
 
 ## 사용기술
